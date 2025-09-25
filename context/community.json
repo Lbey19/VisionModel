@@ -1,0 +1,15 @@
+{
+  "nom": "Collectif Les Ateliers",
+  "environnement": "urbain péri-central",
+  "climat": "tempéré",
+  "effectif_estime": 25,
+  "vulnerables": ["2 personnes âgées", "1 asthmatique"],
+  "ressources": {
+    "eau": ["bidons 20L x3", "pastilles chlorées"],
+    "energie": ["groupe 2000W", "lampes dynamo"],
+    "comms": ["talkies PMR446"],
+    "secours": ["trousse basique", "compresses stériles"]
+  },
+  "contraintes": ["couvre-feu local", "pas d’Internet"],
+  "zones_refuge": ["sous-sol ventilé", "couloir sans fenêtres (nuit)"]
+}
