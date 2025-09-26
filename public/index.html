@@ -1,83 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision AI - Assistant IA</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vision AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://kit.fontawesome.com/1f5a5a8f3d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-eye"></i>
-                    <h1>Vision AI</h1>
-                </div>
-                <div class="status" id="status">
-                    <span class="status-dot"></span>
-                    <span>Connecting...</span>
-                </div>
-            </div>
-        </header>
+  <div class="page">
+    <header class="appbar">
+      <div class="brand">
+        <span class="logo"><i class="fa-solid fa-eye"></i></span>
+        <h1>Vision AI</h1>
+      </div>
+      <div class="status">
+        <span id="status-dot" class="dot"></span>
+        <span id="status-text">Connexion…</span>
+      </div>
+    </header>
 
-        <!-- Chat Container -->
-        <div class="chat-container">
-            <!-- Messages Area -->
-            <div class="messages" id="messages">
-                <div class="message bot">
-                    <div class="message-avatar">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="message-content">
-                        <p>👋 Salut ! Je suis Vision, votre assistant IA. Comment puis-je vous aider aujourd'hui ?</p>
-                    </div>
-                </div>
-            </div>
+    <main class="chat">
+      <div id="messages" class="messages"></div>
 
-            <!-- Input Area -->
-            <div class="input-container">
-                <form id="chatForm" class="chat-form">
-                    <div class="input-wrapper">
-                        <textarea 
-                            id="messageInput" 
-                            placeholder="Tapez votre message ici..." 
-                            rows="1"
-                            maxlength="1000"
-                        ></textarea>
-                        <button type="submit" id="sendButton" class="send-button">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                    <div class="input-info">
-                        <span class="char-count">
-                            <span id="charCount">0</span>/1000
-                        </span>
-                        <span class="shortcut">
-                            Appuyez sur Entrée pour envoyer, Shift+Entrée pour nouvelle ligne
-                        </span>
-                    </div>
-                </form>
-            </div>
+      <form id="composer" class="composer">
+        <div class="input-wrap">
+          <textarea id="prompt" rows="1" maxlength="1000" placeholder="Tape ta question ici…"></textarea>
+          <div class="meta">
+            <span id="counter">0/1000</span>
+            <button id="send" class="send" type="submit" title="Envoyer">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
         </div>
+      </form>
+    </main>
+  </div>
 
-        <!-- Loading Indicator -->
-        <div class="loading" id="loading">
-            <div class="loading-dots">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-            <span>Vision réfléchit...</span>
-        </div>
+  <template id="message-tpl">
+    <div class="message">
+      <div class="message-avatar"></div>
+      <div class="message-content"></div>
     </div>
+  </template>
 
-    <!-- Toast Notifications -->
-    <div id="toast-container" class="toast-container"></div>
-
-    <script src="script.js"></script>
+  <script src="script.js" type="module"></script>
 </body>
 </html>

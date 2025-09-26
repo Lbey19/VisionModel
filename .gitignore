@@ -61,3 +61,15 @@ Thumbs.db
 
 # Windows specific
 desktop.ini
+
+# Ollama models (too large for Git)
+ollama-windows-amd64.exe
+*.bin
+*.gguf
+models/
+
+# RAG index (can be regenerated)
+rag.index.json
+
+# Test files
+test.json
