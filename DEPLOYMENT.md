@@ -11,7 +11,7 @@
 - Après installation, exécuter :
 ```bash
 ollama pull llama3.1:8b
-ollama pull gemma3:1b
+ollama pull gemma2:2b
 ollama pull nomic-embed-text
 ```
 
