@@ -118,7 +118,7 @@ Créer `.env` si nécessaire :
 ```
 OLLAMA_URL=http://127.0.0.1:11434
 PORT=3001
-MODEL=gemma3:1b
+MODEL=gemma2:2b
 ```
 
 ## Sécurité
