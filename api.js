@@ -35,10 +35,7 @@ function detectMode(message) {
   const survival = [
     /\bsurvie\b/, /\bpremiers?\s*secours\b/, /\beau\b/, /\bfiltr(e|er)\b/, /\bjavel\b/,
     /\brefuge\b/, /\bgénérateur\b/, /\bblackout\b/, /\bcoupure\b/, /\btempête\b/,
-    /\balimentation\b/, /\bincendie\b/, /\bpansement\b/, /\bblessure\b/,
-    /\bpanique\b/, /\bstress\b/, /\bcrise\b/, /\burgence\b/, /\bcalmer\b/,
-    /\bhygiène\b/, /\bnavigation\b/, /\borientation\b/, /\bréparat(ion|eur)\b/,
-    /\bévacuation\b/, /\bsurveillance\b/, /\bsécurité\b/, /\bchauffage\b/, /\bventilation\b/
+    /\balimentation\b/, /\bincendie\b/, /\bpansement\b/, /\bblessure\b/
   ];
   if (survival.some(rx => rx.test(m))) return "survival";
 
