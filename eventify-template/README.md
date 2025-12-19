@@ -19,8 +19,8 @@ Eventify is a comprehensive solution for managing and organizing events efficien
 
 ### Prerequisites
 
-- Node.js 18+ or Python 3.8+ (depending on your implementation)
-- Database (PostgreSQL/MongoDB/MySQL)
+- Node.js 18+
+- Database (PostgreSQL/MongoDB/MySQL) - optional, configure in .env
 - Git
 
 ### Installation
@@ -31,16 +31,11 @@ git clone https://github.com/YOUR-USERNAME/eventify.git
 cd eventify
 
 # Install dependencies
-npm install  # For Node.js
-# or
-pip install -r requirements.txt  # For Python
+npm install
 
 # Set up environment variables
 cp .env.example .env
 # Edit .env with your configuration
-
-# Run database migrations
-npm run migrate  # or your database setup command
 
 # Start the application
 npm start
@@ -49,14 +44,14 @@ npm start
 ## 🛠️ Development
 
 ```bash
-# Run in development mode
+# Run in development mode (requires nodemon)
 npm run dev
 
-# Run tests
+# Run tests (requires jest)
 npm test
 
-# Build for production
-npm run build
+# Run linter (requires eslint)
+npm run lint
 ```
 
 ## 📁 Project Structure
